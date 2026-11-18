@@ -32,17 +32,36 @@ is the Scotch: open and aggressive. The mascot follows suit.
 | [braveheart-databricks](https://github.com/Braveheart-Chess/braveheart-databricks) | A Databricks workspace for exploring the training data. |
 | [braveheart-branding](https://github.com/Braveheart-Chess/braveheart-branding) | The logo, the avatar, the favicons, this banner, and the scripts that make them. |
 
-## Play it
+## Quickstart
 
-- **On Lichess:** challenge [jwallace145](https://lichess.org/@/jwallace145),
-  online 08:00 to 20:00 UTC every day, or watch its games live on its profile.
-- **Locally:** on macOS or Linux, install it with
-  [Homebrew](https://github.com/Braveheart-Chess/homebrew-tap):
+On macOS or Linux, one command installs the engine from the
+[Homebrew tap](https://github.com/Braveheart-Chess/homebrew-tap), with its
+NNUE net built in:
 
-  ```sh
-  brew install braveheart-chess/tap/braveheart
-  ```
+```sh
+brew install braveheart-chess/tap/braveheart
+```
 
-  or download a binary (macOS or x86-64 Linux) from the
-  [latest release](https://github.com/Braveheart-Chess/braveheart/releases/latest).
-  Then load `braveheart` in any UCI GUI.
+Then try it from the terminal:
+
+```sh
+braveheart --version          # the release you installed
+braveheart perft --depth 5    # 4,865,609: every position five half-moves from the start
+
+# Ask for its reply to the Scotch (1. e4 e5 2. Nf3 Nc6 3. d4), with two seconds to think
+printf 'position startpos moves e2e4 e7e5 g1f3 b8c6 d2d4\ngo movetime 2000\n' | braveheart
+```
+
+The last command prints the engine's search as it deepens and ends with its
+choice, such as `bestmove e5d4`. To play against it, add `braveheart` as a
+UCI engine in a GUI such as [Cute Chess](https://github.com/cutechess/cutechess)
+or [En Croissant](https://encroissant.org/), using the path `which braveheart`
+prints. The [tap's README](https://github.com/Braveheart-Chess/homebrew-tap#try-it)
+explains each command, the engine's options and the supported platforms. No
+Homebrew? Download a binary (macOS or x86-64 Linux) from the
+[latest release](https://github.com/Braveheart-Chess/braveheart/releases/latest).
+
+## Play it on Lichess
+
+Challenge [jwallace145](https://lichess.org/@/jwallace145), online 08:00 to
+20:00 UTC every day, or watch its games live on its profile.
