@@ -28,6 +28,7 @@ is the Scotch: open and aggressive. The mascot follows suit.
 | [braveheart-selfplay](https://github.com/Braveheart-Chess/braveheart-selfplay) | The self-play dataset: billions of positions labelled by the engine itself, and how they are generated, relabelled and audited. |
 | [braveheart-trainer](https://github.com/Braveheart-Chess/braveheart-trainer) | Trains the NNUE nets on those positions, and records every net it has made. |
 | [braveheart-lichess-bot](https://github.com/Braveheart-Chess/braveheart-lichess-bot) | The Lichess bot: play the engine, or watch it play. |
+| [homebrew-tap](https://github.com/Braveheart-Chess/homebrew-tap) | The Homebrew tap: install the engine on macOS or Linux with one command. |
 | [braveheart-databricks](https://github.com/Braveheart-Chess/braveheart-databricks) | A Databricks workspace for exploring the training data. |
 | [braveheart-branding](https://github.com/Braveheart-Chess/braveheart-branding) | The logo, the avatar, the favicons, this banner, and the scripts that make them. |
 
@@ -35,6 +36,13 @@ is the Scotch: open and aggressive. The mascot follows suit.
 
 - **On Lichess:** challenge [jwallace145](https://lichess.org/@/jwallace145),
   online 08:00 to 20:00 UTC every day, or watch its games live on its profile.
-- **Locally:** download a binary (macOS or x86-64 Linux) from the
-  [latest release](https://github.com/Braveheart-Chess/braveheart/releases/latest)
-  and load it in any UCI GUI.
+- **Locally:** on macOS or Linux, install it with
+  [Homebrew](https://github.com/Braveheart-Chess/homebrew-tap):
+
+  ```sh
+  brew install braveheart-chess/tap/braveheart
+  ```
+
+  or download a binary (macOS or x86-64 Linux) from the
+  [latest release](https://github.com/Braveheart-Chess/braveheart/releases/latest).
+  Then load `braveheart` in any UCI GUI.
